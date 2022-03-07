@@ -13,7 +13,7 @@ public class UnitTest
     public UnitTest()
     {
         appHost = new BasicAppHost().Init();
-        appHost.Container.AddTransient<MyServices>();
+        appHost.Container.AddTransient<AstroServices>();
     }
 
     [OneTimeTearDown]
@@ -22,7 +22,7 @@ public class UnitTest
     [Test]
     public void Can_call_MyServices()
     {
-        var service = appHost.Container.Resolve<MyServices>();
+        var service = appHost.Container.Resolve<AstroServices>();
 
         var response = (HelloResponse)service.Any(new Hello { Name = "World" });
 
