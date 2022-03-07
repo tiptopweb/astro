@@ -1,0 +1,58 @@
+﻿---
+// Example: src/pages/film/[urlkey].astro
+
+export async function getStaticPaths() {
+  const data = await fetch('https://astro.tiptopweb.com.au/films?applicationid=1&sectionid=4&year=2022&format=json').then(response => response.json());
+  return data.results.map((film) => {
+      return {
+        params: { urlkey: film.urlKey },
+        props: { film },
+      };
+    });
+}
+
+const { urlkey } = Astro.request.params;
+const { film } = Astro.props;
+---
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{film.cpxTitle.englishTitle}</title>
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<style global>
+		@import "../../styles/global.css";
+		@import "../../styles/home.css";
+	</style>
+
+	<style>
+		header {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+			max-width: min(100%, 68ch);
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<div>
+				<img src="/assets/logo.svg" alt="Astro logo">
+				<h1>+</h1>
+				<img src="/assets/servicestack.svg" style="height:1.2em" alt="ServiceStack logo">
+			</div>
+		</header>
+		<p><br/><p>
+		<h1>{film.cpxTitle.englishTitle}</h1>
+		<h2>{film.cpxTitle.frenchTitle}</h2>
+		<p><br/><p>	
+		<p>{film.cpxText.englishSynopsis}</p>
+		<p><br/><p>	
+		<p><a href="/">back to list of films</a></p>
+
+	</main>
+</body>
+</html>

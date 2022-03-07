@@ -12,6 +12,10 @@ let title = 'My Astro Site';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
+
+const response = await fetch('https://astro.tiptopweb.com.au/films?applicationid=1&sectionid=4&year=2022&format=json');
+const data = await response.json();
+
 ---
 <html lang="en">
 <head>
@@ -38,23 +42,16 @@ let title = 'My Astro Site';
 	<main>
 		<header>
 			<div>
-				<img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-				<h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
+				<img src="/assets/logo.svg" alt="Astro logo">
+				<h1>+</h1>
+				<img src="/assets/servicestack.svg" style="height:1.2em" alt="ServiceStack logo">
 			</div>
 		</header>
-
-		<Tour />
-
-		<!--
-
-		You can also use imported framework components directly in your markup!
 		
-		Note: by default, these components are NOT interactive on the client.
-		The `:visible` directive tells Astro to make it interactive.
-		
-		See https://docs.astro.build/core-concepts/component-hydration/ 
-
-		-->
+		<h2>List of films:</h2>
+		<ul>
+          {data.results.map(film => <li>{film.id} - <a href={"/film/" + film.urlKey}>{film.cpxTitle.englishTitle}</a></li>)}
+        </ul>
 
 	</main>
 </body>

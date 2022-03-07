@@ -24,7 +24,7 @@ namespace Tiptopweb.Astro
                 services.AddSingleton<IDbConnectionFactory>(new OrmLiteConnectionFactory(
                     context.Configuration.GetConnectionString("DefaultConnection")
                     ?? "Server=localhost;Database=test;User Id=test;Password=test;MultipleActiveResultSets=True;",
-                    SqlServer2012Dialect.Provider));
+                    SqlServerDialect.Provider));
             });
             /* Create non-existing Table and add Seed Data Example
             .ConfigureAppHost(appHost => {
