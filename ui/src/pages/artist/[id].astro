@@ -1,25 +1,25 @@
 ﻿---
-// Example: src/pages/film/[urlkey].astro
+// Running at build time
 
 export async function getStaticPaths() {
-  const data = await fetch('https://astro.tiptopweb.com.au/films?applicationid=1&sectionid=4&year=2022&format=json').then(response => response.json());
-  return data.results.map((film) => {
+  const data = await fetch('https://astro.tiptopweb.com.au/find-artists?format=json').then(response => response.json());
+  return data.results.map((artist) => {
       return {
-        params: { urlkey: film.urlKey },
-        props: { film },
+        params: { id: artist.artistId + "" },
+        props: { artist },
       };
     });
 }
 
-const { urlkey } = Astro.request.params;
-const { film } = Astro.props;
+const { id } = Astro.request.params;
+const { artist } = Astro.props;
 ---
 
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>{film.cpxTitle.englishTitle}</title>
+	<title>{artist.name}</title>
 
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<style global>
@@ -46,12 +46,14 @@ const { film } = Astro.props;
 			</div>
 		</header>
 		<p><br/><p>
-		<h1>{film.cpxTitle.englishTitle}</h1>
-		<h2>{film.cpxTitle.frenchTitle}</h2>
+		<h1>{artist.name}</h1>
 		<p><br/><p>	
-		<p>{film.cpxText.englishSynopsis}</p>
+		<p>List of albums:</p>
+		<ul>
+          {artist.albums?.map(album => <li>{album.title}</li>)}
+        </ul>
 		<p><br/><p>	
-		<p><a href="/">back to list of films</a></p>
+		<p><a href="/">back to list of artists</a></p>
 
 	</main>
 </body>

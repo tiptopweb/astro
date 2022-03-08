@@ -1,20 +1,17 @@
 ---
 // Component Imports
-import Tour from '../components/Tour.astro';
 // You can import components from any supported Framework here!
-
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
-let title = 'My Astro Site';
+let title = 'Astro + ServiceStack Site';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 
-const response = await fetch('https://astro.tiptopweb.com.au/films?applicationid=1&sectionid=4&year=2022&format=json');
-const data = await response.json();
+const data = await fetch('https://astro.tiptopweb.com.au/find-artists?format=json').then(response => response.json());
 
 ---
 <html lang="en">
@@ -47,10 +44,10 @@ const data = await response.json();
 				<img src="/assets/servicestack.svg" style="height:1.2em" alt="ServiceStack logo">
 			</div>
 		</header>
-		
-		<h2>List of films:</h2>
+		<p><br/></p>
+		<h2>List of Artists:</h2>
 		<ul>
-          {data.results.map(film => <li>{film.id} - <a href={"/film/" + film.urlKey}>{film.cpxTitle.englishTitle}</a></li>)}
+          {data.results.map(artist => <li><a href={"/artist/" + artist.artistId}>{artist.name}</a></li>)}
         </ul>
 
 	</main>

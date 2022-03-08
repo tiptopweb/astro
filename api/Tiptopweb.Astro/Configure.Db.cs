@@ -23,8 +23,8 @@ namespace Tiptopweb.Astro
             .ConfigureServices((context, services) => {
                 services.AddSingleton<IDbConnectionFactory>(new OrmLiteConnectionFactory(
                     context.Configuration.GetConnectionString("DefaultConnection")
-                    ?? "Server=localhost;Database=test;User Id=test;Password=test;MultipleActiveResultSets=True;",
-                    SqlServerDialect.Provider));
+                    ?? "chinook.sqlite",
+                    SqliteDialect.Provider));
             });
             /* Create non-existing Table and add Seed Data Example
             .ConfigureAppHost(appHost => {
