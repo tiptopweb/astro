@@ -2,16 +2,20 @@
 // Running at build time
 
 export async function getStaticPaths() {
+
   const data = await fetch('https://astro.tiptopweb.com.au/find-artists?format=json').then(response => response.json());
   return data.results.map((artist) => {
+      var regEx1 = new RegExp('[^\\w ]+', 'g');
+      var regEx2 = new RegExp(' +', 'g');
+      var slug = artist.name.toLowerCase().replace(regEx1, '').replace(regEx2, '-');
       return {
-        params: { id: artist.artistId + "" },
+        params: { slug: slug },
         props: { artist },
       };
     });
 }
 
-const { id } = Astro.request.params;
+const { slug } = Astro.request.params;
 const { artist } = Astro.props;
 ---
 

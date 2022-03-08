@@ -13,6 +13,11 @@ let title = 'Astro + ServiceStack Site';
 
 const data = await fetch('https://astro.tiptopweb.com.au/find-artists?format=json').then(response => response.json());
 
+function convertToSlug(Text) {
+  return Text.toLowerCase()
+             .replace(/[^\w ]+/g, '')
+             .replace(/ +/g, '-');
+}
 ---
 <html lang="en">
 <head>
@@ -47,7 +52,7 @@ const data = await fetch('https://astro.tiptopweb.com.au/find-artists?format=jso
 		<p><br/></p>
 		<h2>List of Artists:</h2>
 		<ul>
-          {data.results.map(artist => <li><a href={"/artist/" + artist.artistId}>{artist.name}</a></li>)}
+          {data.results.map(artist => <li><a href={"/artist/" + convertToSlug(artist.name)}>{artist.name}</a></li>)}
         </ul>
 
 	</main>
