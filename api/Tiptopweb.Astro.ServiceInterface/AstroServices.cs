@@ -9,6 +9,4 @@ public class AstroServices : Service
     {
         return new HelloResponse { Result = $"Hello, {request.Name}!" };
     }
-    
-    
 }

@@ -10,5 +10,4 @@ namespace Tiptopweb.Astro.ServiceModel;
 [Route("/find-artists")]
 public class FindArtists : QueryDb<Artist>
 {
-    
 }
