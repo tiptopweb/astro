@@ -19,4 +19,4 @@ TODO:
 
 * Also add some API calls at run time and test partial hydration
 * publish the static part to CDN and proxy the /api to the web server
-* add TailwindCSS and Vue components
+* add Vue components

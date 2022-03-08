@@ -23,12 +23,10 @@ const { artist } = Astro.props;
 ---
 
 <BaseLayout title={artist.name}>
-    <h1>{artist.name}</h1>
-    <p><br/><p>	
-    <p>List of albums:</p>
+    <h1 class="text-4xl py-4">{artist.name}</h1>
+    <p class="text-2xl py-4">List of albums:</p>
     <ul>
       {artist.albums?.map(album => <li>{album.title}</li>)}
     </ul>
-    <p><br/><p>	
-    <p><a href="/">back to list of artists</a></p>
+    <p class="py-4"><a class="underline text-orange-600 hover:text-orange-800" href="/">back to list of artists</a></p>
 </BaseLayout>

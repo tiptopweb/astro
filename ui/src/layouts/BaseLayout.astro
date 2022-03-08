@@ -11,29 +11,18 @@ const { title } = Astro.props
 
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<style global>
-		@import "../styles/global.css";
-		@import "../styles/home.css";
-	</style>
-
-	<style>
-		header {
-			display: flex;
-			flex-direction: column;
-			gap: 1em;
-			max-width: min(100%, 68ch);
-		}
+			@import "../styles/global.css";
 	</style>
 </head>
 <body>
-	<main>
-		<header>
-			<div>
-				<img src="/assets/logo.svg" alt="Astro logo">
-				<h1>+</h1>
-				<img src="/assets/servicestack.svg" style="height:1.2em" alt="ServiceStack logo">
+	<main class="container max-w-screen-sm mx-auto px-4">
+		<header class="py-5">
+			<div class="flex flex-row space-x-4 items-center">
+			    <div><img height="200" width="100" src="/assets/logo.svg" alt="Astro logo"></div>
+			    <div class="text-5xl">+</div>
+			    <div><img height="100" width="250" src="/assets/servicestack.svg" alt="ServiceStack logo"></div>			
 			</div>
 		</header>
-		<p><br/></p>
 		<slot />
 
 	</main>
