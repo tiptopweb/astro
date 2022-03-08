@@ -1,4 +1,7 @@
 ﻿---
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
 // Running at build time
 
 export async function getStaticPaths() {
@@ -19,46 +22,13 @@ const { slug } = Astro.request.params;
 const { artist } = Astro.props;
 ---
 
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>{artist.name}</title>
-
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<style global>
-		@import "../../styles/global.css";
-		@import "../../styles/home.css";
-	</style>
-
-	<style>
-		header {
-			display: flex;
-			flex-direction: column;
-			gap: 1em;
-			max-width: min(100%, 68ch);
-		}
-	</style>
-</head>
-<body>
-	<main>
-		<header>
-			<div>
-				<img src="/assets/logo.svg" alt="Astro logo">
-				<h1>+</h1>
-				<img src="/assets/servicestack.svg" style="height:1.2em" alt="ServiceStack logo">
-			</div>
-		</header>
-		<p><br/><p>
-		<h1>{artist.name}</h1>
-		<p><br/><p>	
-		<p>List of albums:</p>
-		<ul>
-          {artist.albums?.map(album => <li>{album.title}</li>)}
-        </ul>
-		<p><br/><p>	
-		<p><a href="/">back to list of artists</a></p>
-
-	</main>
-</body>
-</html>
+<BaseLayout title={artist.name}>
+    <h1>{artist.name}</h1>
+    <p><br/><p>	
+    <p>List of albums:</p>
+    <ul>
+      {artist.albums?.map(album => <li>{album.title}</li>)}
+    </ul>
+    <p><br/><p>	
+    <p><a href="/">back to list of artists</a></p>
+</BaseLayout>
