@@ -3,7 +3,7 @@
 // You can import components from any supported Framework here!
 
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Counter from '../components/Counter.vue';
+import PetiteVue from '../components/PetiteVue.astro';
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -23,12 +23,12 @@ function convertToSlug(Text) {
 }
 ---
 <BaseLayout title="Astro + ServiceStack">
+    <PetiteVue client:visible></PetiteVue>  
+
     <h2 class="text-2xl py-4">List of Artists:</h2>
     <ul>
       {data.results.map(artist => <li><a class="underline text-orange-600 hover:text-orange-800" href={"/artist/" + convertToSlug(artist.name)}>{artist.name}</a></li>)}
     </ul>
     
-    <Counter client:visible>
-       <h1>Hello, Vue!</h1>
-    </Counter>
 </BaseLayout>
+

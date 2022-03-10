@@ -16,19 +16,13 @@
 
   <ItemGroup>
     <PackageReference Include="ServiceStack" Version="6.*" />
-    <PackageReference Include="ServiceStack.OrmLite.Sqlite" Version="6.0.2" />
-    <PackageReference Include="ServiceStack.Server" Version="6.0.2" />
+    <PackageReference Include="ServiceStack.OrmLite.Sqlite" Version="6.0.3" />
+    <PackageReference Include="ServiceStack.Server" Version="6.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Tiptopweb.Astro.ServiceInterface\Tiptopweb.Astro.ServiceInterface.csproj" />
     <ProjectReference Include="..\Tiptopweb.Astro.ServiceModel\Tiptopweb.Astro.ServiceModel.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="chinook.sqlite">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

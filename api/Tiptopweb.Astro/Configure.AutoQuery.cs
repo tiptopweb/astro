@@ -11,10 +11,10 @@ namespace Tiptopweb.Astro
                 appHost.Plugins.Add(new AutoQueryFeature {
                     MaxLimit = 1000,
                     IncludeTotal = true,
-                    //GenerateCrudServices = new GenerateCrudServices {
-                    //     AutoRegister = true,
-                    //    //AddDataContractAttributes = false,
-                    //}
+                    GenerateCrudServices = new GenerateCrudServices {
+                         AutoRegister = true,
+                        //AddDataContractAttributes = false,
+                    }
                 });
             });
     }
