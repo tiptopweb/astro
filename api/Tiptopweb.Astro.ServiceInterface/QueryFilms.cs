@@ -1,4 +1,5 @@
-﻿using ServiceStack;
+﻿using System;
+using ServiceStack;
 using Tiptopweb.Astro.ServiceModel;
 using Tiptopweb.Astro.ServiceModel.Types;
 
@@ -8,6 +9,9 @@ public partial class AstroServices : Service
 {
     public object Any(QueryFilms query)
     {
+        // default to this year if not provided
+        if (query.Year == 0) query.Year = DateTime.Now.Year;
+        
         using var db = AutoQuery.GetDb(query, base.Request);
         var sql = AutoQuery.CreateQuery(query, base.Request, db);
 
