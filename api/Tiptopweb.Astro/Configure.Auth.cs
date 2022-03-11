@@ -35,11 +35,11 @@ namespace Tiptopweb.Astro
                 var appSettings = appHost.AppSettings;
                 appHost.Plugins.Add(new AuthFeature(() => new CustomUserSession(),
                     new IAuthProvider[] {
-                        new JwtAuthProvider(appSettings) {
-                            RequireSecureConnection = !appHost.IsDevelopmentEnvironment(),
-                            AuthKey = AesUtils.CreateKey(),
-                            UseTokenCookie = true,
-                        },
+                        // new JwtAuthProvider(appSettings) {
+                        //     RequireSecureConnection = !appHost.IsDevelopmentEnvironment(),
+                        //     AuthKey = AesUtils.CreateKey(),
+                        //     UseTokenCookie = true,
+                        // },
                         new CredentialsAuthProvider(appSettings)     /* Sign In with Username / Password credentials */
                     }));
 

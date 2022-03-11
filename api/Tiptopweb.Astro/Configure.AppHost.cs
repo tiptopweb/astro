@@ -11,6 +11,10 @@ public class AppHost : AppHostBase, IHostingStartup
     public void Configure(IWebHostBuilder builder) => builder
         .ConfigureServices(services => {
             // Configure ASP.NET Core IOC Dependencies
+        })        
+        .ConfigureAppConfiguration((hostingContext, config) => {
+            // we read the settings from AWS Parameter Store
+            config.AddSystemsManager("/astro/");
         });
 
     public AppHost() : base("Tiptopweb.Astro", typeof(AstroServices).Assembly) {}

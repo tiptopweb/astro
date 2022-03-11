@@ -21,10 +21,13 @@ namespace Tiptopweb.Astro
     {
         public void Configure(IWebHostBuilder builder) => builder
             .ConfigureServices((context, services) => {
+                // services.AddSingleton<IDbConnectionFactory>(new OrmLiteConnectionFactory(
+                //     context.Configuration.GetConnectionString("DefaultConnection")
+                //     ?? "films.sqlite",
+                //     SqliteDialect.Provider));
                 services.AddSingleton<IDbConnectionFactory>(new OrmLiteConnectionFactory(
-                    context.Configuration.GetConnectionString("DefaultConnection")
-                    ?? "films.sqlite",
-                    SqliteDialect.Provider));
+                    context.Configuration.GetConnectionString("DbConnectionString"),
+                    SqlServerDialect.Provider));
             });
             /* Create non-existing Table and add Seed Data Example
             .ConfigureAppHost(appHost => {

@@ -1,0 +1,27 @@
+﻿---
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Running at build time
+
+export async function getStaticPaths() {
+
+  const data = await fetch('https://astro.tiptopweb.com.au/query-films?year=2022&format=json').then(response => response.json());
+  return data.results.map((film) => {
+      return {
+        params: { slug: film.urlKey },
+        props: { film },
+      };
+    });
+}
+
+const { slug } = Astro.request.params 
+const { film } = Astro.props;
+---
+
+<BaseLayout title={film.cpxTitle.englishTitle}>
+    <h1 class="text-4xl py-4">{film.cpxTitle.englishTitle}</h1>
+    <h2 class="text-2xl">{film.cpxTitle.frenchTitle}</h2>
+    <div class="py-4">{film.cpxText.englishSynopsis.replace('<p>', '<p class="text-justify">')}</div>
+    <p class="py-4"><a class="underline text-orange-600 hover:text-orange-800" href="/">back to list of films</a></p>
+</BaseLayout>
