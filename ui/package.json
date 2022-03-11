@@ -13,5 +13,9 @@
     "astro": "^0.23.7",
     "postcss": "^8.4.8",
     "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^3.6.12",
+    "@splidejs/vue-splide": "^0.5.18"
   }
 }

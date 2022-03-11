@@ -1,6 +1,7 @@
 ﻿---
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Slider from '../../components/Slider.vue';
 
 // Running at build time
 
@@ -8,21 +9,35 @@ export async function getStaticPaths() {
 
   const data = await fetch('https://astro.tiptopweb.com.au/query-films?year=2022&format=json').then(response => response.json());
   return data.results.map((film) => {
+      
+      let filmImages = film.media
+          .filter((media) => media.type == 0 && media.cpxParam.images.small)
+          .map((media) => {
+             return { 
+                src: "https:" + media.cpxParam.blobContainer + "/" + media.cpxParam.images.small.blobFileName,
+                alt: "Image " + media.id
+             };    
+          });
+         
+      //console.log(filmImages);
+      
       return {
         params: { slug: film.urlKey },
-        props: { film },
+        props: { film, filmImages },
       };
     });
 }
 
 const { slug } = Astro.request.params 
-const { film } = Astro.props;
+const { film, filmImages } = Astro.props;
 ---
 
 <BaseLayout title={film.cpxTitle.englishTitle}>
-    <div py-4"><img src={"https:" + film.media[0].cpxParam.blobContainer + "/" + film.media[0].cpxParam.images.large.blobFileName} /></div>
+    <p class="py-4"><a class="underline text-orange-600 hover:text-orange-800" href="/">back to list of films</a></p>
+    
+    <Slider client:load slides={filmImages}></Slider>
+         
     <h1 class="text-4xl py-4">{film.cpxTitle.englishTitle}</h1>
     <h2 class="text-2xl">{film.cpxTitle.frenchTitle}</h2>
     <div class="py-4">{film.cpxText.englishSynopsis.replace('<p>', '<p class="text-justify">')}</div>
-    <p class="py-4"><a class="underline text-orange-600 hover:text-orange-800" href="/">back to list of films</a></p>
 </BaseLayout>
