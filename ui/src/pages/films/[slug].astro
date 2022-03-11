@@ -20,6 +20,7 @@ const { film } = Astro.props;
 ---
 
 <BaseLayout title={film.cpxTitle.englishTitle}>
+    <div py-4"><img src={"https:" + film.media[0].cpxParam.blobContainer + "/" + film.media[0].cpxParam.images.large.blobFileName} /></div>
     <h1 class="text-4xl py-4">{film.cpxTitle.englishTitle}</h1>
     <h2 class="text-2xl">{film.cpxTitle.frenchTitle}</h2>
     <div class="py-4">{film.cpxText.englishSynopsis.replace('<p>', '<p class="text-justify">')}</div>

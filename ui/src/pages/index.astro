@@ -12,15 +12,20 @@ let title = 'Astro + ServiceStack Site';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
+// 
 
-const data = await fetch('https://astro.tiptopweb.com.au/query-films?year=2022&format=json').then(response => response.json());
+const data = await fetch('https://astro.tiptopweb.com.au/query-films?year=2022&orderBy=urlKey&format=json').then(response => response.json());
 ---
 <BaseLayout title="Astro + ServiceStack">
 
     <h2 class="text-2xl py-4">List of Films for 2022:</h2>
-    <ul>
-      {data.results.map(film => <li><a class="underline text-orange-600 hover:text-orange-800" href={"/films/" + film.urlKey}>{film.cpxTitle.englishTitle}</a></li>)}
-    </ul>
-    
+    <div class="grid grid-cols-3 gap-3"> 
+        { data.results.map(film => 
+            <div class="text-orange-600 hover:text-orange-800">          
+               <a href={"/films/" + film.urlKey}><img src={"https:" + film.media[0].cpxParam.blobContainer + "/" + film.media[0].cpxParam.images.small.blobFileName} /></a>
+               {film.cpxTitle.englishTitle}
+            </div>
+        ) }
+    </div>   
 </BaseLayout>
 
