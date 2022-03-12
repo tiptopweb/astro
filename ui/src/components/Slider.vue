@@ -1,7 +1,7 @@
 ﻿<template>
   <Splide :options="options">
     <SplideSlide v-for="slide in slides" :key="slide.alt">
-      <img :src="slide.src" :width="slide.width" :height="slide.height" :alt="slide.alt">
+      <img :data-splide-lazy="slide.src" :width="slide.width" :height="slide.height" :alt="slide.alt">
     </SplideSlide>
   </Splide>
 </template>
@@ -29,6 +29,7 @@ export default defineComponent({
         type: 'loop',
         pagination: false,
         arrows: 'slider',
+        lazyLoad: 'nearby',
         perPage: 2,
         gap: 10,
         breakpoints: {

@@ -19,10 +19,16 @@ const data = await fetch('https://astro.tiptopweb.com.au/query-films?year=2022&o
 <BaseLayout title="Astro + ServiceStack" description="Test website using Astro and ServiceStack. Displays a list of movies from the AF French Film Festival">
 
     <h2 class="text-2xl py-4">List of Films for 2022:</h2>
-    <div class="grid grid-cols-3 gap-3"> 
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"> 
         { data.results.map(film => 
             <div class="text-green-800 hover:text-orange-600">          
-               <a href={"/films/" + film.urlKey}><img src={"https:" + film.media[0].cpxParam.blobContainer + "/" + film.media[0].cpxParam.images.small.blobFileName} /></a>
+               <a href={"/films/" + film.urlKey}>
+                  <img src={"https:" + film.media[0].cpxParam.blobContainer + "/" + film.media[0].cpxParam.images.small.blobFileName}
+                     width={film.media[0].cpxParam.images.small.imageWidth}
+                     height={film.media[0].cpxParam.images.small.imageHeight}
+                     alt={film.urlKey}
+                   />
+               </a>
                {film.cpxTitle.englishTitle}
             </div>
         ) }
