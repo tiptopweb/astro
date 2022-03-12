@@ -1,22 +1,16 @@
 ---
 // Component Imports
-// You can import components from any supported Framework here!
-
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = 'Astro + ServiceStack Site';
+let title = 'Astro + ServiceStack';
+let description = 'Test website using Astro and ServiceStack. Displays a list of movies from the AF French Film Festival';
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
-// 
-
+// get the list of films
 const data = await fetch('https://astro.tiptopweb.com.au/query-films?year=2022&orderBy=urlKey&format=json').then(response => response.json());
+
 ---
-<BaseLayout title="Astro + ServiceStack" description="Test website using Astro and ServiceStack. Displays a list of movies from the AF French Film Festival">
+
+<BaseLayout title={title} description={description}>
 
     <h2 class="text-2xl py-4">List of Films for 2022:</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"> 
