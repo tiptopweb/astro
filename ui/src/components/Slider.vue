@@ -1,7 +1,7 @@
 ﻿<template>
-  <Splide :options="{ rewind: true, perPage: 2, gap: '1rem' }">
+  <Splide :options="options">
     <SplideSlide v-for="slide in slides" :key="slide.alt">
-      <img :src="slide.src" :alt="slide.alt">
+      <img :src="slide.src" :width="slide.width" :height="slide.height" :alt="slide.alt">
     </SplideSlide>
   </Splide>
 </template>
@@ -25,7 +25,28 @@ export default defineComponent({
   
   setup() {
     return {
+      options: {
+        type: 'loop',
+        pagination: false,
+        arrows: 'slider',
+        perPage: 2,
+        gap: 10,
+        breakpoints: {
+          640: {
+            perPage: 1,
+          }
+        }
+      }
     }
   }
 })
 </script>
+
+<style>
+  .splide__arrow--prev {
+    left: -1.6em;
+  }
+  .splide__arrow--next {
+    right: -1.6em;
+  }
+</style>

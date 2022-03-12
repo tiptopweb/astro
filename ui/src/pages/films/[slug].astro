@@ -9,13 +9,18 @@ export async function getStaticPaths() {
 
   const data = await fetch('https://astro.tiptopweb.com.au/query-films?year=2022&format=json').then(response => response.json());
   return data.results.map((film) => {
+  
+      let filmDescription = film.cpxTitle.englishTitle + " is showing at the Alliance Francaise French Film Festival 2022. " +
+         "Directed by " + film.cpxParam.director +  " and starring " + film.cpxParam.cast;
       
       let filmImages = film.media
           .filter((media) => media.type == 0 && media.cpxParam.images.small)
           .map((media) => {
              return { 
                 src: "https:" + media.cpxParam.blobContainer + "/" + media.cpxParam.images.small.blobFileName,
-                alt: "Image " + media.id
+                alt: "Image " + media.id,
+                width: media.cpxParam.images.small.imageWidth,
+                height: media.cpxParam.images.small.imageHeight,
              };    
           });
          
@@ -23,21 +28,23 @@ export async function getStaticPaths() {
       
       return {
         params: { slug: film.urlKey },
-        props: { film, filmImages },
+        props: { film, filmDescription, filmImages },
       };
     });
 }
 
 const { slug } = Astro.request.params 
-const { film, filmImages } = Astro.props;
+const { film, filmImages, filmDescription } = Astro.props;
 ---
 
-<BaseLayout title={film.cpxTitle.englishTitle}>
-    <p class="py-4"><a class="underline text-orange-600 hover:text-orange-800" href="/">back to list of films</a></p>
+<BaseLayout title={film.cpxTitle.englishTitle} description={filmDescription}>
+    <p class="py-4"><a class="underline text-green-800 hover:text-orange-600" href="/">back to list of films</a></p>
     
     <Slider client:load slides={filmImages}></Slider>
          
     <h1 class="text-4xl py-4">{film.cpxTitle.englishTitle}</h1>
     <h2 class="text-2xl">{film.cpxTitle.frenchTitle}</h2>
-    <div class="py-4">{film.cpxText.englishSynopsis.replace('<p>', '<p class="text-justify">')}</div>
+    <p class="pt-4">DIRECTED BY: {film.cpxParam.director?.toUpperCase()}</p>
+    <p class="pt-2">STARRING: {film.cpxParam.cast?.toUpperCase()}</p>
+    <div class="py-4">{film.cpxText.englishSynopsis.replaceAll('<p>', '<p class="text-justify">')}</div>
 </BaseLayout>
