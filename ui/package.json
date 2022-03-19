@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev --legacy-build",
-    "build": "astro build --legacy-build",
+    "start": "astro dev",
+    "build": "astro build",
     "preview": "astro preview"
   },
   "devDependencies": {
     "@astrojs/renderer-vue": "^0.4.0",
-    "astro": "^0.24.0",
-    "postcss": "^8.4.8",
+    "astro": "^0.24.3",
+    "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23"
   },
   "dependencies": {
