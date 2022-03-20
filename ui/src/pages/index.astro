@@ -12,6 +12,8 @@ const data = await fetch('https://astro.tiptopweb.com.au/query-films?year=2022&o
 // removed from Image
 //width={film.media[0].cpxParam.images.small.imageWidth}
 //height={film.media[0].cpxParam.images.small.imageHeight}
+
+const url = "https://affestival.blob.core.windows.net/articles/817/large-b4822732-b56a-4d1e-a399-ce7505361196.jpg";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -27,7 +29,6 @@ const data = await fetch('https://astro.tiptopweb.com.au/query-films?year=2022&o
                      width=430
                      height=240
                      layout="fixed"     
-                     format={[]}            
                      grayscale    
                    />
                </a>
