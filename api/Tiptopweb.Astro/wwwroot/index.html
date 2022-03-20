@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Astro + ServiceStack</title>
 	<meta name="description" content="Test website using Astro and ServiceStack. Displays a list of movies from the AF French Film Festival">
 
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-	
-<link rel="stylesheet" href="./assets/index.ac0a3c5c.css">
+<link rel="stylesheet" href="/assets/BaseLayout.a9c61c85.css"></link>
 </head>
 <body>
 	<main class="container max-w-4xl mx-auto px-4">
@@ -21,217 +21,1812 @@
 		<h2 class="text-2xl py-4">List of Films for 2022:</h2><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"> 
         <div class="text-green-800 hover:text-orange-600">          
                <a href="/films/anais-in-love">
-                  <img src="https://affestival.blob.core.windows.net/articles/817/small-b4822732-b56a-4d1e-a399-ce7505361196.jpg" width="640" height="360" alt="anais-in-love">
+                  <style>
+    
+    .astro-imagetools-picture-C55FB524 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-C55FB524 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-C55FB524 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHBf/EACMQAAICAgEEAgMAAAAAAAAAAAECAwQFEQAGEiExUXEiMkH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AXKlfHU8HLZsRJPclqmWGSZiI0Y77QNfX9+uKvRmXyF2/FU7jNNbQvErvrbKf1BPgHQPKRmsTRgxFKOOsgjN6JCp2Rok7Hn50ObLVK7T0QYY/wk2ul12+D6+OBNrHUrRzPHJiykiMUZZCwYEHRB4comZxlJ8lM7Voy76ZiR7JA3w4H//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-C55FB524"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/73ff15dd15ea115dda05e0a40bf5c27b@430w.46675be4.jpeg"
+            alt="anais-in-love"
+            srcset="/assets/73ff15dd15ea115dda05e0a40bf5c27b@320w.8c5a8c9c.jpeg 320w, /assets/73ff15dd15ea115dda05e0a40bf5c27b@430w.46675be4.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                ANAÏS IN LOVE
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/another-world">
-                  <img src="https://affestival.blob.core.windows.net/articles/824/small-384dd43a-4146-40a2-8d37-bac72934f1a0.jpg" width="640" height="360" alt="another-world">
+                  <style>
+    
+    .astro-imagetools-picture-03F331FE span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-03F331FE img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-03F331FE span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMGAv/EACQQAAICAQQCAQUAAAAAAAAAAAECAwQFABEhMQYiQTJRYXGB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AIl6YKTGi8sVxgBHMXPoN+QPtuON9NwtTJZm5J47Qyty65Yzh44TIYgoJKluxuduuNwNaZ2UEqxBH51D4zJXcbaWzj7c9acnl4nKk7n5270F75oY1yNWCsJbK16qRGWQszMQTyST3sR+uvjRpHlnvlEncAyz14ZpWI+p2jUs39POjQf/2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-03F331FE"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/5de82d1433029c578fa9d00e2bb4f3cb@430w.55e0a338.jpeg"
+            alt="another-world"
+            srcset="/assets/5de82d1433029c578fa9d00e2bb4f3cb@320w.9a331740.jpeg 320w, /assets/5de82d1433029c578fa9d00e2bb4f3cb@430w.55e0a338.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                ANOTHER WORLD
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/a-tale-of-love-and-desire">
-                  <img src="https://affestival.blob.core.windows.net/articles/818/small-7ae6c761-dc06-4c30-80ac-d7d527cf9d1a.jpg" width="640" height="360" alt="a-tale-of-love-and-desire">
+                  <style>
+    
+    .astro-imagetools-picture-32908343 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-32908343 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-32908343 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYCBAcI/8QAJRAAAgIBAwMEAwAAAAAAAAAAAQIDBBEABRIGITEHE1GBFCJB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AE7pzb64sU5VEa2TNHyaSQrGEVgct/POB96g1WtufW1qYtE73bxLrKgKsrHABz4AHxpG6d3rcLz1KdqwZKzS82Tio5EYxkgZPk9tXbdyxR2E3qkzRW/yXi91fPEHsNB0P6Z9TWqfT0tCtsSRQU7UkEZ93isgGDzUMCQpz2GdGsG6UeTfNpWfdZZbMsTGFGeRv1QAEDsfkk/ejQf/2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-32908343"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/b6215dd27d033199e0a276b27c44dfc1@430w.14b714b0.jpeg"
+            alt="a-tale-of-love-and-desire"
+            srcset="/assets/b6215dd27d033199e0a276b27c44dfc1@320w.4ade865c.jpeg 320w, /assets/b6215dd27d033199e0a276b27c44dfc1@430w.14b714b0.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                A TALE OF LOVE AND DESIRE
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/authentik">
-                  <img src="https://affestival.blob.core.windows.net/articles/814/small-376d825e-5525-4202-a350-1a4da43dd22a.jpg" width="640" height="360" alt="authentik">
+                  <style>
+    
+    .astro-imagetools-picture-059F7A3E span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-059F7A3E img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-059F7A3E span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGB//EACUQAAIBAwQCAQUAAAAAAAAAAAECAwAEEQUGEiETFDEiQVFxkf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCB9iG12rbQ3Ze3Njd28/uhCsjoysePIdkZVfgdZP5p3DqW3Z0iVdThYx3SGzvEtiihmC8xKxHL6SR30B3WSafd3E2sSJLNI6JaEKpbIAVAR1+wDSqPUrzymPzuI28mVHQPLOf7QWm74YbrcF3IGhLcsOVYY5feioQzyKiYb5XJ6ooP/9k=");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-059F7A3E"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/953576c5d8b172ffef70d5cf6fa1f672@430w.d33004a9.jpeg"
+            alt="authentik"
+            srcset="/assets/953576c5d8b172ffef70d5cf6fa1f672@320w.1f1f9afd.jpeg 320w, /assets/953576c5d8b172ffef70d5cf6fa1f672@430w.d33004a9.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                AUTHENTIK
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/between-two-worlds">
-                  <img src="https://affestival.blob.core.windows.net/articles/821/small-744ea868-aab1-4f9e-8ceb-b78f13fb2824.jpg" width="640" height="360" alt="between-two-worlds">
+                  <style>
+    
+    .astro-imagetools-picture-4A4B0663 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-4A4B0663 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-4A4B0663 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABwAFBv/EACUQAAIBBAEDBAMAAAAAAAAAAAEDAgAEBRESITFBBgcTUWGBkf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBnyHqvGLJGmyl4Ahsk/wBoevvdm6tLtFpd475T8bIsery3lqOonwPwfusPJZK8W9RXcMhIknlE6II0RojtXE55UWXapzM5SIJJMz3MpHff7NAv4312BibGeRtWMvGJE2FfGI3sgdCeh0Af3VRDavctEVwawQj0A5HoKqD/2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-4A4B0663"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/b20c3d0a9d6e5557e0fadfe67c73310e@430w.270e160b.jpeg"
+            alt="between-two-worlds"
+            srcset="/assets/b20c3d0a9d6e5557e0fadfe67c73310e@320w.4bae50c2.jpeg 320w, /assets/b20c3d0a9d6e5557e0fadfe67c73310e@430w.270e160b.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                BETWEEN TWO WORLDS
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/employee-of-the-month">
-                  <img src="https://affestival.blob.core.windows.net/articles/807/small-8056df7a-c016-4950-8e3a-7ea8c8599779.jpg" width="640" height="360" alt="employee-of-the-month">
+                  <style>
+    
+    .astro-imagetools-picture-220955EE span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-220955EE img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-220955EE span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcEBQb/xAAkEAABAwMDBAMAAAAAAAAAAAABAgMEABEhBRIxBhRCURNhcf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBV9LaOZxTLRN7SWklobQDvAIuQPG4PP3TF7p+K+58GrLEKOFl9ON48QccZ/MUstBWqPKQtmyFF43sPVwKvWHVpn6sAo2WlKFXzuBWOaCRL1tsTpQejsvOhwhS1OkXIAHvOLZorEdUS30ay6ELsNqeAPQooP//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-220955EE"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/32c620158dbd6a74868a411b7c8e090a@430w.bd4b5531.jpeg"
+            alt="employee-of-the-month"
+            srcset="/assets/32c620158dbd6a74868a411b7c8e090a@320w.8c71c6c5.jpeg 320w, /assets/32c620158dbd6a74868a411b7c8e090a@430w.bd4b5531.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                EMPLOYEE OF THE MONTH
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/everything-went-fine">
-                  <img src="https://affestival.blob.core.windows.net/articles/801/small-adbe6081-114a-4504-bfdf-2be43b1bba44.jpg" width="640" height="360" alt="everything-went-fine">
+                  <style>
+    
+    .astro-imagetools-picture-014054DF span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-014054DF img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-014054DF span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMGBAf/xAAkEAACAgEEAgEFAAAAAAAAAAABAgMEEQAFBhIhQTEyYXGBkf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCb4xyOhT3IvUmltsZi4Eg8AkfT9gM4H40rm3M61qxZQw9meAKyqOyo3dj/ADDa47RZpb1CJncRyAdwrFe2M4+NVUEKX6exwWuzxvt8szAOV7OGADEggnAHvQOq75JNXjBaTMeUyxJZvJOSfZ84/WjWPZq0T7VWd07OyksSSST2OjQf/9k=");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-014054DF"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/3ad6807d90601efbb4da82d38ccf9fc6@430w.dde20ede.jpeg"
+            alt="everything-went-fine"
+            srcset="/assets/3ad6807d90601efbb4da82d38ccf9fc6@320w.dca2104e.jpeg 320w, /assets/3ad6807d90601efbb4da82d38ccf9fc6@430w.dde20ede.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                EVERYTHING WENT FINE
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/farewell-mr-haffmann">
-                  <img src="https://affestival.blob.core.windows.net/articles/805/small-64b56914-3ea7-4e1f-8edc-13917fa4099c.jpg" width="640" height="360" alt="farewell-mr-haffmann">
+                  <style>
+    
+    .astro-imagetools-picture-EECA91F1 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-EECA91F1 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-EECA91F1 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAIDBAUGB//EACcQAAIBAgUCBwEAAAAAAAAAAAECAwARBAUSITEiQQcTFCVEUXGR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AObZdHCcLGXUMSq2cXvGfu3cUzisRiJMz9G8LLIh1WZSTo2PA42NRMumkXG5JGrHy5mYSL2YBdr1fZvGp8VcLF1COSCF3CsRqOg82/BQL9u+SqK9zYKjDpvt25orZy7PsB/KKD//2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-EECA91F1"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/53ac359191286f56ccf4b9e555289a56@430w.0396bd13.jpeg"
+            alt="farewell-mr-haffmann"
+            srcset="/assets/53ac359191286f56ccf4b9e555289a56@320w.13dc503e.jpeg 320w, /assets/53ac359191286f56ccf4b9e555289a56@430w.0396bd13.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                FAREWELL, MR. HAFFMANN
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/fire">
-                  <img src="https://affestival.blob.core.windows.net/articles/819/small-8d98b7d2-64fd-4783-b6af-e746f663fc1b.jpg" width="640" height="360" alt="fire">
+                  <style>
+    
+    .astro-imagetools-picture-D3EEABC0 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-D3EEABC0 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-D3EEABC0 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAACAAH/8QAJRAAAQIGAgAHAAAAAAAAAAAAAQIDAAQFBhEhBxIUMUFRYnHh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMbsy7kyHIouGdfWESy1OsNgrCFlOkJODoY/YQ3CaZ+rXBVbhmJp2YZeUQ8vxBcZ7EAhKN40DvWsekDxBKcEEg+4jYeEKxP02k1pmSmC22VJX16pICseYyNQDEVMMDGXG9/IRQbn7uripl7NQXgKwB0ToY+ooD//2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-D3EEABC0"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/2a57ae4356043a0324f5630cfd9870bc@430w.dc8d357d.jpeg"
+            alt="fire"
+            srcset="/assets/2a57ae4356043a0324f5630cfd9870bc@320w.1cd78be4.jpeg 320w, /assets/2a57ae4356043a0324f5630cfd9870bc@430w.dc8d357d.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                FIRE
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/fly-me-away">
-                  <img src="https://affestival.blob.core.windows.net/articles/815/small-3345a0fc-da75-4e65-8319-2b8aebade2f8.jpg" width="640" height="360" alt="fly-me-away">
+                  <style>
+    
+    .astro-imagetools-picture-B253A99C span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-B253A99C img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-B253A99C span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGCP/EACoQAAEDAwIEBQUAAAAAAAAAAAECAxEABAUGEgcIITEUFSIjgSRRYaLR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL7jXnMppvSN7ftBlR3JZQok7U7zBJiD2n5ik/LPkX9TabyJfbbT4O7IQUGUwuVR16yCD8EUr4+Ze+u+GF81cPlaC6wSNoE+4PsKRcsGQurGwyotXA2FIa3QhJn1u95H5oNTtWyUNhIHaipLzvIwPqP0T/KKD//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-B253A99C"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/a8b6d609fb106eb178d9585a96ecd5f7@430w.c9197e5a.jpeg"
+            alt="fly-me-away"
+            srcset="/assets/a8b6d609fb106eb178d9585a96ecd5f7@320w.3213c7b0.jpeg 320w, /assets/a8b6d609fb106eb178d9585a96ecd5f7@430w.c9197e5a.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                FLY ME AWAY
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/french-tech">
-                  <img src="https://affestival.blob.core.windows.net/articles/812/small-a857ab9a-d1ee-46c4-b0ca-31ec99bbec51.jpg" width="640" height="360" alt="french-tech">
+                  <style>
+    
+    .astro-imagetools-picture-144B4789 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-144B4789 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-144B4789 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAIDBAUGB//EACUQAAIBAwMEAgMAAAAAAAAAAAECAwAEERIhMQUGQVEHFCJCYf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCXZfIxmtmltY1lEcZCfYk3ZwSAu3jIHGNjvSep93Xkyobp7JQERlXV+DYIIXVyM4PP9rntugR5WXUCWP7H3nb1Td7I7IVLuV9ajQV/dE0lz1ia6gnt3W5zMdMhwCScgbbjPB80VlO5mZep4BONC+aKD//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-144B4789"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/248697cae4174afa9d413aea32532e0e@430w.99aabb67.jpeg"
+            alt="french-tech"
+            srcset="/assets/248697cae4174afa9d413aea32532e0e@320w.acfcf435.jpeg 320w, /assets/248697cae4174afa9d413aea32532e0e@430w.99aabb67.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                FRENCH TECH
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/full-time">
-                  <img src="https://affestival.blob.core.windows.net/articles/822/small-dd71678f-df40-41dd-9582-63157967d7e3.jpg" width="640" height="360" alt="full-time">
+                  <style>
+    
+    .astro-imagetools-picture-CDC3FD2F span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-CDC3FD2F img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-CDC3FD2F span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGBAf/xAAlEAACAgICAgEEAwAAAAAAAAABAgMEBREABhIhYQciMUFRcYH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A5X17PWqOAkR6lcmw5h28RVtAKfJfn9b43xfYKbZCWkzLSoXY1MhkdmSKRGB8hr2PIqfX9clKLscZjts2wkmjv2PvPK/6bYqlmbeMjyddJ40hd/A7VWYO2iwGgx+TvgaOyVOt2JaTxZWRYRXCxlD6Yeb7Ptf53w4g73ElTsU9esojgiLBEX8KC7HQ/wBJ4cD/2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-CDC3FD2F"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/23890ee80e0b6376960da055cded3e1e@430w.7a2ed332.jpeg"
+            alt="full-time"
+            srcset="/assets/23890ee80e0b6376960da055cded3e1e@320w.395998cb.jpeg 320w, /assets/23890ee80e0b6376960da055cded3e1e@430w.7a2ed332.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                FULL TIME
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/goliath">
-                  <img src="https://affestival.blob.core.windows.net/articles/825/small-7b0fff73-5ed8-42c8-8c0b-d95751cf23a8.jpg" width="640" height="360" alt="goliath">
+                  <style>
+    
+    .astro-imagetools-picture-C2EBE4E2 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-C2EBE4E2 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-C2EBE4E2 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYDBwj/xAAnEAACAQMDAwMFAAAAAAAAAAABAgMEBREAEjEGIUEHEzIjYYHB8P/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDO9ytdRZ2jlqQhWph96LYcjBbg/wB50yQiC0Ulhu9uppGq5QJpIdpxIFf5j7ZUr+NReobtJKhc5zR0xxwMiNO+OPOmTo2lgukloo7hEk9NDZJHjRh8G+o2QeQd3fQNHUi3e5zUdVLRRoz0/CMSMb3x4OO2jVPSdR3kCNBcqoKsaBR7h7DaD+9Gg//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-C2EBE4E2"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/445958cbff65b6320b03e3789d49b94d@430w.19bde972.jpeg"
+            alt="goliath"
+            srcset="/assets/445958cbff65b6320b03e3789d49b94d@320w.ae11da59.jpeg 320w, /assets/445958cbff65b6320b03e3789d49b94d@430w.19bde972.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                GOLIATH
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/happening">
-                  <img src="https://affestival.blob.core.windows.net/articles/798/small-a6f82bea-e24c-4331-aaba-53df0afb9256.jpg" width="640" height="360" alt="happening">
+                  <style>
+    
+    .astro-imagetools-picture-BA3F36D3 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-BA3F36D3 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-BA3F36D3 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBBgf/xAAlEAACAQMCBQUAAAAAAAAAAAABAgMABBEFEgYHEyExMkFRY4H/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AxXgvSjrOoxWcQhUiVWDy9+2cnA9+wpjmJbWNhqvQghltmaJZnG/cCzZPpwNvxik+WTM3GWmBmYjMh8/W1TzEmkuZtPuJ3LzyQYdz5baSoz+Cgrw6exQYJGwPO7GaKQooP//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-BA3F36D3"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/205d1ad5d839b000d5683d6f1780c64f@430w.83a9a02b.jpeg"
+            alt="happening"
+            srcset="/assets/205d1ad5d839b000d5683d6f1780c64f@320w.8193a22f.jpeg 320w, /assets/205d1ad5d839b000d5683d6f1780c64f@430w.83a9a02b.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                HAPPENING
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/hear-me-out">
-                  <img src="https://affestival.blob.core.windows.net/articles/796/small-84404545-63ca-44b0-b1b9-3bd5c7edcac9.jpg" width="640" height="360" alt="hear-me-out">
+                  <style>
+    
+    .astro-imagetools-picture-68416A8B span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-68416A8B img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-68416A8B span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIDBQYH/8QAKhAAAQIEBAMJAAAAAAAAAAAAAQIDAAQFEQYHEiETUaEIFDNTYYGRsbL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AsM18aS+G6MmUcbf7xUEqQ2phWktpBGpV+e9tukJlXiVVVlpyUVqdalQktKUSTpUTtc7n3jDdpLxqH6Ic/QhsklqRiydZQbNqk7qHMjh2+z8wHceMPL6wRAQLwQH/2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-68416A8B"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/192661c2fea3bb25199462907020049b@430w.627259c7.jpeg"
+            alt="hear-me-out"
+            srcset="/assets/192661c2fea3bb25199462907020049b@320w.47413365.jpeg 320w, /assets/192661c2fea3bb25199462907020049b@430w.627259c7.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                HEAR ME OUT
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/kompromat">
-                  <img src="https://affestival.blob.core.windows.net/articles/827/small-74622401-552e-4b85-8584-6138ecd27e0b.jpg" width="640" height="360" alt="kompromat">
+                  <style>
+    
+    .astro-imagetools-picture-5C464DD4 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-5C464DD4 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-5C464DD4 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAwf/xAAmEAACAQMCBAcAAAAAAAAAAAABAgMABBEFMRIhIlEGExRBYYHw/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOK+a02lkwkIw2PDzc9uVYLe20sBgkyGMWJDnkWPv8EVGhlkW3AV2AOdjT2nW0L+HNTuWjUzxzwqjncAk5H3QN+ihukjeAYQLw9KcX7eirNsTBawJD0KUDEDud6KD//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-5C464DD4"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/c0aca1c2b02f4e61c99074372c0c0cc1@430w.402f6c00.jpeg"
+            alt="kompromat"
+            srcset="/assets/c0aca1c2b02f4e61c99074372c0c0cc1@320w.7e7df559.jpeg 320w, /assets/c0aca1c2b02f4e61c99074372c0c0cc1@430w.402f6c00.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                KOMPROMAT
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/la-traviata-my-brothers-and-i">
-                  <img src="https://affestival.blob.core.windows.net/articles/799/small-97db661b-20f0-4310-ba57-ba5ac9f17533.jpg" width="640" height="360" alt="la-traviata-my-brothers-and-i">
+                  <style>
+    
+    .astro-imagetools-picture-8CF26462 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-8CF26462 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-8CF26462 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUHBAj/xAAmEAACAQQCAAUFAAAAAAAAAAABAgMABAURBiEHEhMUMSJBYYGh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AHuc428/JsCxkkktGjmjvIUcDShQV7+R2f3qko417zw9zGQsLpLu/S4Jx0ob6fKAqlQB0x2W1sH4PVVWzdpDAHYsNb7rBwJFtOI4qO3HpoAxAH2Jck/0mgkF6mZxkotLyyv4pY11qON5EP5VlBBFFdBzqBIddb7OqKD/2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-8CF26462"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/55e1f901f0d8312c5e8c988e87aa9e36@430w.b6c635bd.jpeg"
+            alt="la-traviata-my-brothers-and-i"
+            srcset="/assets/55e1f901f0d8312c5e8c988e87aa9e36@320w.e745e7f9.jpeg 320w, /assets/55e1f901f0d8312c5e8c988e87aa9e36@430w.b6c635bd.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                LA TRAVIATA, MY BROTHERS AND I
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/little-nicholas-treasure">
-                  <img src="https://affestival.blob.core.windows.net/articles/830/small-30a839bb-e65b-4384-a777-26fac4fb8871.jpg" width="640" height="360" alt="little-nicholas-treasure">
+                  <style>
+    
+    .astro-imagetools-picture-410D0CE9 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-410D0CE9 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-410D0CE9 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUHAwb/xAAlEAABAwMDAwUAAAAAAAAAAAABAgMEAAUREiExBhQiE0FhcZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8ASTb33NzagPsyW1+q4yVPeKQAcDx/T87U/j9TMxkdo5KW84lajmI4UocyBgDCuRk5Hv8AYrW9uKmQnTJw4pGnSogAp2zseaj9wmyIt+kQYzqmoa1J1NI2Sc80FrWNZDqL1cmw6NZSmQQATzzRXKxHlqiM6iDhAAykbCig/9k=");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-410D0CE9"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/739356d57d11c2364a9b0ba485a285be@430w.cbc0f4cb.jpeg"
+            alt="little-nicholas-treasure"
+            srcset="/assets/739356d57d11c2364a9b0ba485a285be@320w.06a678aa.jpeg 320w, /assets/739356d57d11c2364a9b0ba485a285be@430w.cbc0f4cb.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                LITTLE NICHOLAS’ TREASURE
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/lost-illusions">
-                  <img src="https://affestival.blob.core.windows.net/articles/734/small-8708303f-9b1d-490a-a478-ee02d8cdd9c7.jpg" width="640" height="360" alt="lost-illusions">
+                  <style>
+    
+    .astro-imagetools-picture-3E81D7F0 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-3E81D7F0 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-3E81D7F0 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAcBAwQF/8QAKRAAAQIEBAUFAQAAAAAAAAAAAQIDAAQFEQYSIUEHExUxYRQiM0JRgf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBV4EovX51Tbi0Jly8UrAPvG4sDpY27+I3PUmT6TjZxDTRTTXkSzbzihmSbZRqNfr2H4Y73B+Sl00kuBuzi2itSsxvmHYg7fyI4qUOnUHCSDSZf05nlcyZIcUrmqDgsTcnXU6+YBIOsM81V5k6G3xKgi0nfcwQH/9k=");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-3E81D7F0"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/ccc1a3117b637bd8f3ec6eb962dcfbc9@430w.46f28049.jpeg"
+            alt="lost-illusions"
+            srcset="/assets/ccc1a3117b637bd8f3ec6eb962dcfbc9@320w.79b75056.jpeg 320w, /assets/ccc1a3117b637bd8f3ec6eb962dcfbc9@430w.46f28049.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                LOST ILLUSIONS
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/love-songs-for-tough-guys">
-                  <img src="https://affestival.blob.core.windows.net/articles/794/small-1e4aaeb7-57a7-43e3-bdd1-22cfeea347f6.jpg" width="640" height="360" alt="love-songs-for-tough-guys">
+                  <style>
+    
+    .astro-imagetools-picture-DD1B4636 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-DD1B4636 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-DD1B4636 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYCAwQH/8QAJhAAAgEDAwQBBQAAAAAAAAAAAQIDBAURAAYhBxIUMWETFSJxkf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBG3NbV3NtiLw4Ehnp2QUtOEVpAhUhIyRyM/wAJ1lbpb9rorcm4FaC4VczRKI6pGUszARqAAc8dxJ9DjUr/AHivo9v1Hh1LUz04aSOSECOQMWCn8wAx44wTjTzHI9ZL0qmqnaaRu5yznOW8fOf3nQcVu6023rlUWm4W2Caelcp9XPb3gksDx794z8aNXdZZXqt+Vkk5DP2quQAOBwPXwNGg/9k=");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-DD1B4636"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/4c0e003ccf5c02a16bf4cdac36224fc6@430w.dbd04cde.jpeg"
+            alt="love-songs-for-tough-guys"
+            srcset="/assets/4c0e003ccf5c02a16bf4cdac36224fc6@320w.f40bdfc6.jpeg 320w, /assets/4c0e003ccf5c02a16bf4cdac36224fc6@430w.dbd04cde.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                LOVE SONGS FOR TOUGH GUYS
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/madeleine-collins">
-                  <img src="https://affestival.blob.core.windows.net/articles/820/small-79cfcc08-5294-43b4-b252-eb2b7f748ea6.jpg" width="640" height="360" alt="madeleine-collins">
+                  <style>
+    
+    .astro-imagetools-picture-81C30236 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-81C30236 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-81C30236 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAAGB//EAB8QAAICAgIDAQAAAAAAAAAAAAECAwQAIQUREyIxYf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDlte41afiYw6tEbEcbq50y/OicHycqi1y3SBB52IVdhRrWHu+1iop2olToYZpHkpcg7sWcyuST9O8DMX7Cm9YIQHuQn2H7lg5z3YlJ37HLA//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-81C30236"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/6842b91763b48db519f22a5cc565490c@430w.5a55a435.jpeg"
+            alt="madeleine-collins"
+            srcset="/assets/6842b91763b48db519f22a5cc565490c@320w.307b0e44.jpeg 320w, /assets/6842b91763b48db519f22a5cc565490c@430w.5a55a435.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                MADELEINE COLLINS
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/maigret">
-                  <img src="https://affestival.blob.core.windows.net/articles/804/small-c014c1b4-e09b-489d-978a-093c36bbc62f.jpg" width="640" height="360" alt="maigret">
+                  <style>
+    
+    .astro-imagetools-picture-AFA95252 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-AFA95252 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-AFA95252 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEFAwj/xAAkEAABBAECBgMAAAAAAAAAAAABAAIDESEEBQYTIjFBUUKBof/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDnOIM5ZJ6R8nVdDyVW4o2nT7PuEUMTphG+MOqS7z7+iFCaSWEE49JaieXUSmSeR8jz3c82cYH4AgRY2zR8oWTSa7oQf//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-AFA95252"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/9ac2e14f7d96aa500079623ce55ff97b@430w.5bf7e28a.jpeg"
+            alt="maigret"
+            srcset="/assets/9ac2e14f7d96aa500079623ce55ff97b@320w.7d7f5465.jpeg 320w, /assets/9ac2e14f7d96aa500079623ce55ff97b@430w.5bf7e28a.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                MAIGRET
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/mali-twist">
-                  <img src="https://affestival.blob.core.windows.net/articles/833/small-8675e6a9-e893-4512-8870-bd1579cb2f6c.jpg" width="640" height="360" alt="mali-twist">
+                  <style>
+    
+    .astro-imagetools-picture-35AADB66 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-35AADB66 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-35AADB66 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABwAFBv/EACQQAAIBAwQBBQEAAAAAAAAAAAECAwQREgAFITETBgdCUWGh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ACbYqWnhjgpoMVzbFMjbI3+/vXW1HpOan2ytq5jLTz0K0zSU7DMS+SwLFviBiOP3vRTE7HbjdicIwy89G68/06U973bcJPcLbo2rJvFUbUIZYw1kdGge6lRxY2B67AOgOK1fBKBJUmNmGWIQG3J/NWsUzSzKjyyOzFRyTq0H/9k=");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-35AADB66"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/cccce0185d8b63d5d8b53e273957696c@430w.7587581c.jpeg"
+            alt="mali-twist"
+            srcset="/assets/cccce0185d8b63d5d8b53e273957696c@320w.3bef64b4.jpeg 320w, /assets/cccce0185d8b63d5d8b53e273957696c@430w.7587581c.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                MALI TWIST
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/memory-box">
-                  <img src="https://affestival.blob.core.windows.net/articles/828/small-9f71aa89-d459-41cf-950d-51dcbe0cfcf2.jpg" width="640" height="360" alt="memory-box">
+                  <style>
+    
+    .astro-imagetools-picture-00EADEBD span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-00EADEBD img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-00EADEBD span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAYHAgX/xAAlEAABBAICAQMFAAAAAAAAAAABAgMEEQAhBRIiBgcUFjFRkaH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8ASub9ylIjfHhrp1wpS6OvYACj4qv73nO+tpHJyVSpphyp65CVCOGKCmQqigm9GvK71Y3iOqGwST0OjqlHX9zbTYaPZsrQoaBCyDX7wKHzvqTiXOTeVG4tC2ifEqcJIH4sKGGTlcZkqJ6Czs7OGB//2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-00EADEBD"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/3cdee46ffc530b5f8e9a2e8b6886dece@430w.1fd2fe1e.jpeg"
+            alt="memory-box"
+            srcset="/assets/3cdee46ffc530b5f8e9a2e8b6886dece@320w.affe96b9.jpeg 320w, /assets/3cdee46ffc530b5f8e9a2e8b6886dece@430w.1fd2fe1e.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                MEMORY BOX
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/men-on-the-verge-of-a-nervous-breakdown">
-                  <img src="https://affestival.blob.core.windows.net/articles/810/small-3ae3cb67-f5c5-4175-b33f-eccecb6572f4.jpg" width="640" height="360" alt="men-on-the-verge-of-a-nervous-breakdown">
+                  <style>
+    
+    .astro-imagetools-picture-03FECAF3 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-03FECAF3 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-03FECAF3 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAgX/xAAlEAABAwMDBAMBAAAAAAAAAAABAgMEAAURBhIhExQxQRUjwcP/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AhNP6Z7qxGN1IclEZaXt5TwnznPPOQFAj1jNbsdujMrmXG1GKezaEghTRG1O4D2cnk1CWqbJZZeDT60BQGQD5807pWU/8RqP7Fc2v+jdA1qWG3cb3KfeDaHd2FhOACcZ/aK4aX3es+d55X+Cig//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-03FECAF3"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/3a7ab22c1b0f261f43807bcc8ea229d7@430w.ac935643.jpeg"
+            alt="men-on-the-verge-of-a-nervous-breakdown"
+            srcset="/assets/3a7ab22c1b0f261f43807bcc8ea229d7@320w.840c0232.jpeg 320w, /assets/3a7ab22c1b0f261f43807bcc8ea229d7@430w.ac935643.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                MEN ON THE VERGE OF A NERVOUS BREAKDOWN
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/murder-party">
-                  <img src="https://affestival.blob.core.windows.net/articles/809/small-dbe34572-7348-4250-ad88-0642daf87637.jpg" width="640" height="360" alt="murder-party">
+                  <style>
+    
+    .astro-imagetools-picture-094D5E48 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-094D5E48 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-094D5E48 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYDBAUH/8QAJBAAAgEEAQQCAwAAAAAAAAAAAQMCAAQFESEGEkFRFHEiYZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A5/gLtN9m7xBtVxjatbIM3Lc5d51vR5P36qbOZJTMVFc7IxY1e+6H470dkjzo8j+0rWl05XVeWK2Sie9w4/U+KqZC4cxNqZskT8MHZPsndA7456btt7cWKXrQxwIEp8khcASdceKKzulYRGMJ1yWSJ5+qKD//2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-094D5E48"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/7f1f74feabd5ffce9161bf27049debd8@430w.1e02275c.jpeg"
+            alt="murder-party"
+            srcset="/assets/7f1f74feabd5ffce9161bf27049debd8@320w.30760bec.jpeg 320w, /assets/7f1f74feabd5ffce9161bf27049debd8@430w.1e02275c.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                MURDER PARTY
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/oss-117-from-africa-with-love">
-                  <img src="https://affestival.blob.core.windows.net/articles/806/small-192e6f20-e585-4891-82cc-010d27ccf278.jpg" width="640" height="360" alt="oss-117-from-africa-with-love">
+                  <style>
+    
+    .astro-imagetools-picture-3F1062C0 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-3F1062C0 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-3F1062C0 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAYIAgX/xAAoEAACAgICAAQGAwAAAAAAAAABAgMEBREABgcSITETIkFRYXGBoaL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Az0vtNbrPSsjlI6MU9qCD4sCeX1diQFB+utnZ/A4v9+8RMn2rw1x08k8FW/HeljsrXYRmQKqlHUe40SR6Hid1a/bjxlKRLEgcBwDv2AJIH9nnI7VIUoxIgVVlsEuFUDZCjR/0f3/A4FJwdoxOQxGHlmuPkJVoQo9kqWaRgvzFj9973v13w5L+By1+nUeOrbmijMhbyq2hvQ4cD//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-3F1062C0"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/107834eef4dfe642144b049547d8ca48@430w.1e06ecfe.jpeg"
+            alt="oss-117-from-africa-with-love"
+            srcset="/assets/107834eef4dfe642144b049547d8ca48@320w.5fb9a2d6.jpeg 320w, /assets/107834eef4dfe642144b049547d8ca48@430w.1e06ecfe.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                OSS 117: FROM AFRICA WITH LOVE
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/paris-13th-district">
-                  <img src="https://affestival.blob.core.windows.net/articles/803/small-b6c78780-9962-4eef-b80a-9e3fb2eb69ba.jpg" width="640" height="360" alt="paris-13th-district">
+                  <style>
+    
+    .astro-imagetools-picture-806D793E span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-806D793E img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-806D793E span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGBQf/xAAkEAACAQMDBAMBAAAAAAAAAAABAgMEBREAEiEGEzFhIkGRgf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCGF7FqrII4H7sStkrEmS/6MHkjx68aVufU0tRRiowTNHUI7ZyuQCWUH1wAR9496urjaaGqtnSsU9MjI9xWNsZB2lY8gEcjyfGua18SL0tddqgdu4oi4+ly4x+aDdr7m9Y0U81PLTyupZ1GNuSzH4+ucfzRpy5UcFJOtPTxhIYl2ouSdoyeBnRoP//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-806D793E"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/7508a30c4730a9d64fde87ca48e8b043@430w.154f2fd7.jpeg"
+            alt="paris-13th-district"
+            srcset="/assets/7508a30c4730a9d64fde87ca48e8b043@320w.1da89712.jpeg 320w, /assets/7508a30c4730a9d64fde87ca48e8b043@430w.154f2fd7.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                PARIS, 13TH DISTRICT
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/paul-w-rs-last-journey">
-                  <img src="https://affestival.blob.core.windows.net/articles/826/small-4457f7a3-2d13-40db-8660-1b1f1aba7f83.jpg" width="640" height="360" alt="paul-w-rs-last-journey">
+                  <style>
+    
+    .astro-imagetools-picture-D2250B03 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-D2250B03 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-D2250B03 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcEBQb/xAAnEAACAQMDAwMFAAAAAAAAAAABAgMEBREAEiEGB0ETFSIjMVFhgf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwC4u/Xlm7d1HsdosVL6cbCeojgiREXIGTznc2AOP5nSxs1yjou5UlTUPE8hqTNtdwysG+Q/XKkcePtpempnqW+vNJIZFy5ZiS3Pk6jZMcm1PiuRwNA7LZ3ETpVq20wRwT0sNVIYC6A7UJzt58Ak6NYmk6ovFLTpBFVgxRgKgkhRyo/ALKTjRoP/2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-D2250B03"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/64cf39fce2664a39633f8a7822320422@430w.85fefafb.jpeg"
+            alt="paul-w-rs-last-journey"
+            srcset="/assets/64cf39fce2664a39633f8a7822320422@320w.df4eedd2.jpeg 320w, /assets/64cf39fce2664a39633f8a7822320422@430w.85fefafb.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                PAUL W.R’S LAST JOURNEY
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/peaceful">
-                  <img src="https://affestival.blob.core.windows.net/articles/800/small-9b3a5bfc-ac51-4df0-9922-411d46f7b97f.jpg" width="640" height="360" alt="peaceful">
+                  <style>
+    
+    .astro-imagetools-picture-3454EB2A span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-3454EB2A img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-3454EB2A span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAwX/xAAmEAACAgEDAwMFAAAAAAAAAAABAgMEAAURIQYSMRMUMkFRUmGB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJ0LPqV5LDrIfbLHLDCJuw/LcuRv42B5x3r2aylHRHsapDplG5MwM0UgmZwo5+PjY8H9kZjNamXo7ULYkPuIyoR/x4VeP4ciusL1i7Z9OyytHWV1hUIqhAW7jsAPqecB3Suqq1SCRJaBk3kZlZpAu6+BxsfthnNrwRS1oWkjVm7ByRhgf//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-3454EB2A"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/499b08bd4e9324307c10e7c3db568e57@430w.6bbfc203.jpeg"
+            alt="peaceful"
+            srcset="/assets/499b08bd4e9324307c10e7c3db568e57@320w.1d6c84d0.jpeg 320w, /assets/499b08bd4e9324307c10e7c3db568e57@430w.6bbfc203.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                PEACEFUL
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/petite-maman">
-                  <img src="https://affestival.blob.core.windows.net/articles/845/small-697a0416-1b56-4597-a7e3-40c173b72204.jpg" width="640" height="360" alt="petite-maman">
+                  <style>
+    
+    .astro-imagetools-picture-5417ED57 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-5417ED57 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-5417ED57 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUDBAYH/8QAJxAAAQMDAgQHAAAAAAAAAAAAAQIDEQAEEgUhBhMiMRQjQVGBsfD/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A5HxA4/d6Y2hVw4EBWSiCZHb98Ut1a2KbNtblw24pKAnJwnKdp296YMAPMltzqQYkVneIHnPGrZy8pHUlPoDHegnshzrdKhiI2iaKo6Y6sW6gFGMj9Cig/9k=");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-5417ED57"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/9c6d07a79e01de0031aedb1b3c4983a4@430w.761fe834.jpeg"
+            alt="petite-maman"
+            srcset="/assets/9c6d07a79e01de0031aedb1b3c4983a4@320w.3ca992b6.jpeg 320w, /assets/9c6d07a79e01de0031aedb1b3c4983a4@430w.761fe834.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                PETITE MAMAN
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/pils-adventures">
-                  <img src="https://affestival.blob.core.windows.net/articles/832/small-7608d0a1-195a-49d0-9586-b463ad64e523.jpg" width="640" height="360" alt="pils-adventures">
+                  <style>
+    
+    .astro-imagetools-picture-F75245D2 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-F75245D2 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-F75245D2 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcDBQb/xAAmEAABAwMEAQQDAAAAAAAAAAABAgMEABEhBQYSFBMjMWFikbHR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AH+iYqSynnkEA2+KT20dypkbk1XSPWU52HXEuOr5pXZRuEkHFvxjFUuv6nN7UpfZd5+RWQfuR+qx+yJLsfeMRxlZStMiQkH3wU2tmgebzHNwkJNFRxNTl9dB82SLmyR/KKD/2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-F75245D2"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/8d66574bba524b33c6e953c9503e3c15@430w.61e28f8e.jpeg"
+            alt="pils-adventures"
+            srcset="/assets/8d66574bba524b33c6e953c9503e3c15@320w.3e4c2b7b.jpeg 320w, /assets/8d66574bba524b33c6e953c9503e3c15@430w.61e28f8e.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                PIL’S ADVENTURES
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/purple-noon">
-                  <img src="https://affestival.blob.core.windows.net/articles/823/small-316d6d05-4e96-47c2-a1eb-0e2bd349c362.jpg" width="640" height="360" alt="purple-noon">
+                  <style>
+    
+    .astro-imagetools-picture-A61C02BA span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-A61C02BA img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-A61C02BA span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUHAwb/xAAlEAACAQMCBgMBAAAAAAAAAAABAgMABBEFIRITMVFhkRRBgbH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A5vS7Bb15RPcycQIIkKZ3zjv5rfTnL6sLFoWMXNaJnOzbA747HHqkGjXc5ulYytnlOfS5pVb391cy6rNNcSmURhgytwkHfcY6dKCjwQzXKsTcWaRoxjj+RO6OVHhSPvI/KKksWs6jGvCt1Jjzg/2ig//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-A61C02BA"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/36e0eb7fd08945b23aff1c47525ec3b9@430w.f7fe36c7.jpeg"
+            alt="purple-noon"
+            srcset="/assets/36e0eb7fd08945b23aff1c47525ec3b9@320w.04fe9301.jpeg 320w, /assets/36e0eb7fd08945b23aff1c47525ec3b9@430w.f7fe36c7.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                PURPLE NOON
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/rise">
-                  <img src="https://affestival.blob.core.windows.net/articles/813/small-eea56bc6-06a5-4cae-a2b1-90d8acac4f29.jpg" width="640" height="360" alt="rise">
+                  <style>
+    
+    .astro-imagetools-picture-34F736C0 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-34F736C0 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-34F736C0 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcCBAj/xAAoEAABAgQEBQUAAAAAAAAAAAABAgMABAUhBhESMQcTMkGBFSJRobH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AUuGa80ikvCZLReDqShCswHQCq2fbt9RGTqXIoc4oFpRnQvMJy1Eawb+R48xY4ee/DVYCgDy35VxFulRc3EMxclKTE9jMPSrCwUOTF2x1p0AEWtZRtteAVqqjMqbaDjqkaUAJSFZgDcfsEaArOFqGuWoxVS5Un09q+i5zzN/neCA//9k=");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-34F736C0"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/d9bc9dc580bc98dd3208b252a206b7c0@430w.b37337b5.jpeg"
+            alt="rise"
+            srcset="/assets/d9bc9dc580bc98dd3208b252a206b7c0@320w.3f352f3c.jpeg 320w, /assets/d9bc9dc580bc98dd3208b252a206b7c0@430w.b37337b5.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                RISE
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/rumba-therapy">
-                  <img src="https://affestival.blob.core.windows.net/articles/808/small-ddf8b0fa-72c8-4cec-8cd8-2ccbcde7e841.jpg" width="640" height="360" alt="rumba-therapy">
+                  <style>
+    
+    .astro-imagetools-picture-A8637DA1 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-A8637DA1 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-A8637DA1 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQgA/8QAJxAAAgECBQQBBQAAAAAAAAAAAQIDBBEABQYSIQcTMVGRQnGB4fD/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AMl6jQ0hiy5qtoZ4ohGFN1VW7gbdcegG4J+rnjCND1Qko9E5xRS0UkzGSSnmNQ21mEoJ4FyRbcCOSDb1zif6pi2c1yMbqO5a/2/WGdXSPDpvI0iYopiLmx8nj+Hq5tgKO6fdSXynS9NSUGVx1FKhISWerSFntwTtPgXBH4xsTtpOWSfKB3nZ9jsq7jew82+SfnGwH/9k=");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-A8637DA1"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/51ccd208d9cb3000014d2e189ad953cb@430w.9f69c0a7.jpeg"
+            alt="rumba-therapy"
+            srcset="/assets/51ccd208d9cb3000014d2e189ad953cb@320w.19288b3f.jpeg 320w, /assets/51ccd208d9cb3000014d2e189ad953cb@430w.9f69c0a7.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                RUMBA THERAPY
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/the-braves">
-                  <img src="https://affestival.blob.core.windows.net/articles/802/small-b69458b4-f77c-4f67-8c2e-3afcc1cba4b5.jpg" width="640" height="360" alt="the-braves">
+                  <style>
+    
+    .astro-imagetools-picture-CD328C81 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-CD328C81 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-CD328C81 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHBf/EACQQAAEEAgEEAgMAAAAAAAAAAAECAwQRABIFBiExQQeBE2HB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJn11LVxMCPF4sSEOt0p6QyfK6Oo2HoCzX7xkY6oQv4+4iTHMZfJSUFL6HKISEWCrUEa2cUnkhxpoLFhW1j6v6zKfmOswW4rX4ksJUp0JDSb2Lfc3V+h28YDierEP0tvgpTh1TsUKFbUCa7eMMnfH8/ysZgtx577aNvCVV6A/mGB/9k=");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-CD328C81"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/5c27c147c7c1a4d5afa529d7e7eadf0d@430w.fb5416b2.jpeg"
+            alt="the-braves"
+            srcset="/assets/5c27c147c7c1a4d5afa529d7e7eadf0d@320w.48f10c46.jpeg 320w, /assets/5c27c147c7c1a4d5afa529d7e7eadf0d@430w.fb5416b2.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                THE BRAVES
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/the-fantastic-journey-of-margot-marguerite">
-                  <img src="https://affestival.blob.core.windows.net/articles/831/small-3e71d980-8c81-42d0-8265-c0d8ca5a06cb.jpg" width="640" height="360" alt="the-fantastic-journey-of-margot-marguerite">
+                  <style>
+    
+    .astro-imagetools-picture-8A9965B6 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-8A9965B6 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-8A9965B6 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFBgf/xAAlEAACAgEDAwQDAAAAAAAAAAABAgMEEQAFBhITIRUxUWEiI6H/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A52KlPbg0NZ+lJ4gw7jBWB8jGD7YIOmePXYa5n9SvFJomVo/z/UQMEhlAJLHz9DA+dXOfbfVqbhQNeIL3I26sknODge/1qBtsMc2/wV5UDQvGSy/PnGg39TltCvWiijtYRVHSGUjGjS9/i+zRXJUjooEViAOpjj+6NB//2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-8A9965B6"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/5e9285c8642f5bdbe40a21110122b694@430w.1026414b.jpeg"
+            alt="the-fantastic-journey-of-margot-marguerite"
+            srcset="/assets/5e9285c8642f5bdbe40a21110122b694@320w.cc481cf2.jpeg 320w, /assets/5e9285c8642f5bdbe40a21110122b694@430w.1026414b.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
-               THE FANTASTIC JOURNEY OF MARGOT &amp;amp; MARGUERITE
+               THE FANTASTIC JOURNEY OF MARGOT &amp; MARGUERITE
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/the-kitchen-brigade">
-                  <img src="https://affestival.blob.core.windows.net/articles/795/small-49165b30-0c1e-486a-b38d-46a59b15c1a1.jpg" width="640" height="360" alt="the-kitchen-brigade">
+                  <style>
+    
+    .astro-imagetools-picture-FF1EF934 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-FF1EF934 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-FF1EF934 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQDBQf/xAAkEAABBAEEAgIDAAAAAAAAAAABAgMEEQUAEiEiMVEGExRhcf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBzHvzYcuJJiIWy085ID4aFpRuUE7hx1JUoq/ooedNOfMJ+LyYxTz4nyQtLjituwBqtx9kcUCT796qmZj8PEfGkRl/WmSh8PBKR3p0kX++Bz5409k5Lkt178jY4XEsFRLabNlIPNXoJ8hn8kZKkqehR3E9VsuuPBSDZ4Ow14o8gGiLGjWU5nKTZU5S5Eha1jruNXQPGjQf/2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-FF1EF934"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/fb48233265f9c74e0190a2998ee21635@430w.c03af0ce.jpeg"
+            alt="the-kitchen-brigade"
+            srcset="/assets/fb48233265f9c74e0190a2998ee21635@320w.19c3183f.jpeg 320w, /assets/fb48233265f9c74e0190a2998ee21635@430w.c03af0ce.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                THE KITCHEN BRIGADE
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/the-velvet-queen">
-                  <img src="https://affestival.blob.core.windows.net/articles/829/small-e87c7d60-9fef-49c2-8498-1083d6f0db6d.jpg" width="640" height="360" alt="the-velvet-queen">
+                  <style>
+    
+    .astro-imagetools-picture-9BE4765D span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-9BE4765D img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-9BE4765D span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYDBQf/xAAlEAACAQMDAgcAAAAAAAAAAAABAgMABCEFERIGQRQiMVFScaH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A13qSXVNKik8DavPu25YJyI99h3NWdlbSz2SNes6ycAWCjj+dqc5FVh5gD91EsEXwUbZxQLMSKUG6vjGaKZGtICcp6YwSKKD/2Q==");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-9BE4765D"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/9005d2a2a374631aa984aea2fc438540@430w.bf81e09c.jpeg"
+            alt="the-velvet-queen"
+            srcset="/assets/9005d2a2a374631aa984aea2fc438540@320w.5d1ecee6.jpeg 320w, /assets/9005d2a2a374631aa984aea2fc438540@430w.bf81e09c.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                THE VELVET QUEEN
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/the-villa">
-                  <img src="https://affestival.blob.core.windows.net/articles/811/small-642b4adf-f2dd-4d0b-9cbe-a4b5fee1ba34.jpg" width="640" height="360" alt="the-villa">
+                  <style>
+    
+    .astro-imagetools-picture-B70E0F4C span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-B70E0F4C img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-B70E0F4C span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHBf/EACEQAAICAQQDAQEAAAAAAAAAAAECAwQRAAUSMQYhQRNh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AI2VliuVopucJgYzI0ZHJeXeCD0cYOtLx/zTeKaS7VUuS1GnUIhhPHB5Lxww9g5xpi3nZ6EdYulZVdY/RBOfv91Ib0jwzqY2KlGDKR8IOc6Bv33dlh3aytiRP2Llnx1k96NT+9csbhZexdlaaZu3bvRoP//Z");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-B70E0F4C"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/8aa37f13b2db5a3fae3722f1a30ba18b@430w.ff9f7ed5.jpeg"
+            alt="the-villa"
+            srcset="/assets/8aa37f13b2db5a3fae3722f1a30ba18b@320w.82bfe528.jpeg 320w, /assets/8aa37f13b2db5a3fae3722f1a30ba18b@430w.ff9f7ed5.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                THE VILLA
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/the-young-lovers">
-                  <img src="https://affestival.blob.core.windows.net/articles/797/small-e4cb15bc-47c8-4671-acb1-6b8bc0c35263.jpg" width="640" height="360" alt="the-young-lovers">
+                  <style>
+    
+    .astro-imagetools-picture-5FDDEB06 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-5FDDEB06 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-5FDDEB06 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYEBQcI/8QAJRAAAgIBAwMEAwAAAAAAAAAAAQIDBBEABSEGBxITFDFxIkGS/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AHzux1JvVCpVrHfYNruOxkT2SPkgc5Yt8jgjH7zpQ7e9ZWafUtmuhqxS7lLGnuZYvxUDOBgEHGWP1kaj9ySdzhtz3iZpYtumkRiceLBjgjH1rL5ZHq15bFdik0aKyODyp45Gg63O5bsrFTvOxeQ4I9FuD/ejVdRggalXdq8BZ41Zj6S8kgEn40aD/9k=");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-5FDDEB06"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/6a8fcc23109a08700c8394cb6bb6b4e0@430w.7c81407b.jpeg"
+            alt="the-young-lovers"
+            srcset="/assets/6a8fcc23109a08700c8394cb6bb6b4e0@320w.34ccf264.jpeg 320w, /assets/6a8fcc23109a08700c8394cb6bb6b4e0@430w.7c81407b.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                THE YOUNG LOVERS
             </div><div class="text-green-800 hover:text-orange-600">          
                <a href="/films/waiting-for-bojangles">
-                  <img src="https://affestival.blob.core.windows.net/articles/816/small-b0487c48-5cff-47cb-a3da-955a3c148f4e.jpg" width="640" height="360" alt="waiting-for-bojangles">
+                  <style>
+    
+    .astro-imagetools-picture-C8C48AD1 span {
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  
+        .astro-imagetools-picture-C8C48AD1 img {
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+
+        .astro-imagetools-picture-C8C48AD1 span {
+          background-size: cover;
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAQP/xAAlEAACAQMEAgEFAAAAAAAAAAABAgMEBREABhIhE0EHFTFRYYH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Az56uvGCnktlV5alc0c0T8jjChhjHWf3+M65XK/iq2h9IvVY1UJKZJEmmUkkkDKAemyQQ3fQ0h870sKXrbVAilaSrqj541YgScXjVc++gzD+6rdv7atD2C2TvRhpWpkJYyMfXrvrQS1sIq7bTNAwMUaeIHGM8SRnGjTG6GNtuKU9CfDCIw3Ed9knP30aD/9k=");
+          background-position: 50% 50%;
+        }
+      
+  </style><picture
+    class="astro-imagetools-picture astro-imagetools-picture-C8C48AD1"
+    style="position: relative; display: inline-block"
+    ><img
+            src="/assets/26f7ba39477d1dc420b6ef5b233cbe86@430w.05bca67b.jpeg"
+            alt="waiting-for-bojangles"
+            srcset="/assets/26f7ba39477d1dc420b6ef5b233cbe86@320w.cda0fb3e.jpeg 320w, /assets/26f7ba39477d1dc420b6ef5b233cbe86@430w.05bca67b.jpeg 430w"
+            sizes="(min-width: 430px) 430px, 100vw"
+            width="430"
+            height="240"
+            class="astro-imagetools-img"
+            loading="lazy"
+            decoding="async"
+            style="display: inline-block; overflow: hidden;max-width: 100%; height: auto;"
+            onerror="nextElementSibling.style.zIndex='-1'"
+                  onload="nextElementSibling.animate({opacity:[1,0]},1000).onfinish=()=>{nextElementSibling.remove()}"
+                  
+          /> <span></span>
+  </picture>
+
                </a>
                WAITING FOR BOJANGLES
             </div>
     </div>
 	</main>
-
-
 </body></html>
+

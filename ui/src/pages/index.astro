@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Image from "astro-imagetools";
 
 let title = 'Astro + ServiceStack';
 let description = 'Test website using Astro and ServiceStack. Displays a list of movies from the AF French Film Festival';
@@ -8,19 +9,26 @@ let description = 'Test website using Astro and ServiceStack. Displays a list of
 // get the list of films
 const data = await fetch('https://astro.tiptopweb.com.au/query-films?year=2022&orderBy=urlKey&format=json').then(response => response.json());
 
+// removed from Image
+//width={film.media[0].cpxParam.images.small.imageWidth}
+//height={film.media[0].cpxParam.images.small.imageHeight}
 ---
 
 <BaseLayout title={title} description={description}>
 
     <h2 class="text-2xl py-4">List of Films for 2022:</h2>
+           
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"> 
         { data.results.map(film => 
             <div class="text-green-800 hover:text-orange-600">          
                <a href={"/films/" + film.urlKey}>
-                  <img src={"https:" + film.media[0].cpxParam.blobContainer + "/" + film.media[0].cpxParam.images.small.blobFileName}
-                     width={film.media[0].cpxParam.images.small.imageWidth}
-                     height={film.media[0].cpxParam.images.small.imageHeight}
+                  <Image src={"https:" + film.media[0].cpxParam.blobContainer + "/" + film.media[0].cpxParam.images.small.blobFileName}
                      alt={film.urlKey}
+                     width=430
+                     height=240
+                     layout="fixed"     
+                     format={[]}            
+                     grayscale    
                    />
                </a>
                {film.cpxTitle.englishTitle}
