@@ -25,5 +25,10 @@ public class AppHost : AppHostBase, IHostingStartup
         SetConfig(new HostConfig {
             UseSameSiteCookies = true,
         });
+        
+        // allow some type extensions
+        Config.AllowFileExtensions.Add("webp");
+        Config.AllowFileExtensions.Add("avif");
+
     }
 }
