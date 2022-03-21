@@ -1,7 +1,8 @@
 ﻿---
-
+// Component Imports
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Slider from '../../components/Slider.vue';
+import renderImage from "astro-imagetools/renderImage";
 
 // Generate all the Film pages
 
@@ -10,33 +11,42 @@ export async function getStaticPaths() {
   // get films for 2022 from the API
   const data = await fetch('https://astro-api.tiptopweb.com.au/query-films?year=2022&format=json').then(response => response.json());
   
-  return data.results.map((film) => {
+  return await Promise.all(data.results.map(async (film) => {
   
       let filmDescription = film.cpxTitle.englishTitle + " is showing at the Alliance Francaise French Film Festival 2022. " +
          "Directed by " + film.cpxParam.director +  " and starring " + film.cpxParam.cast;
       
-      let filmImages = film.media
+      const filmImages = await Promise.all(film.media
           .filter((media) => media.type == 0 && media.cpxParam.images.small)
-          .map((media) => {
+          .map(async (media) => {
+          
+             const { image, link, style } = await renderImage({
+                 src: "https:" + media.cpxParam.blobContainer + "/" + media.cpxParam.images.small.blobFileName,
+                 alt: "Image " + media.id,
+                 width: 430,
+                 height: 240,
+                 layout: "fixed",
+                 loading: "eager",
+                 format:[]
+             });
+             
              return { 
-                src: "https:" + media.cpxParam.blobContainer + "/" + media.cpxParam.images.small.blobFileName,
-                alt: "Image " + media.id,
-                width: media.cpxParam.images.small.imageWidth,
-                height: media.cpxParam.images.small.imageHeight,
+                html: link + style + image,
+                id: media.id
              };  
-          });
-         
+          }));
+                
       //console.log(filmImages);
       
       return {
         params: { slug: film.urlKey },
         props: { film, filmDescription, filmImages },
       };
-    });
+    }));
 }
 
 const { slug } = Astro.request.params 
-const { film, filmImages, filmDescription } = Astro.props;
+const { film, filmDescription, filmImages } = Astro.props;
 ---
 
 <BaseLayout title={film.cpxTitle.englishTitle} description={filmDescription}>

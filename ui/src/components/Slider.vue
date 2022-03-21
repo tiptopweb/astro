@@ -1,7 +1,7 @@
 ﻿<template>
   <Splide :options="options">
-    <SplideSlide v-for="slide in slides" :key="slide.alt">
-      <img :data-splide-lazy="slide.src" :width="slide.width" :height="slide.height" :alt="slide.alt">
+    <SplideSlide v-for="slide in slides" :key="slide.id">
+      <div v-html="slide.html"></div>
     </SplideSlide>
   </Splide>
 </template>
@@ -13,16 +13,16 @@ import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
 export default defineComponent({
   name: 'Slider',
-  
+
   components: {
-    Splide, 
+    Splide,
     SplideSlide
   },
-  
+
   props: {
     slides: Array
   },
-  
+
   setup() {
     return {
       options: {
@@ -44,10 +44,10 @@ export default defineComponent({
 </script>
 
 <style>
-  .splide__arrow--prev {
-    left: -1.6em;
-  }
-  .splide__arrow--next {
-    right: -1.6em;
-  }
+.splide__arrow--prev {
+  left: -1.6em;
+}
+.splide__arrow--next {
+  right: -1.6em;
+}
 </style>
