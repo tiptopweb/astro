@@ -8,7 +8,7 @@ import Slider from '../../components/Slider.vue';
 export async function getStaticPaths() {
 
   // get films for 2022 from the API
-  const data = await fetch('https://astro.tiptopweb.com.au/query-films?year=2022&format=json').then(response => response.json());
+  const data = await fetch('https://astro-api.tiptopweb.com.au/query-films?year=2022&format=json').then(response => response.json());
   
   return data.results.map((film) => {
   
