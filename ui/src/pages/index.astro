@@ -7,7 +7,7 @@ let title = 'Astro + ServiceStack';
 let description = 'Test website using Astro and ServiceStack. Displays a list of movies from the AF French Film Festival';
 
 // get the list of films
-const data = await fetch('https://astro.tiptopweb.com.au/query-films?year=2022&orderBy=urlKey&format=json').then(response => response.json());
+const data = await fetch('https://astro-api.tiptopweb.com.au/query-films?year=2022&orderBy=urlKey&format=json').then(response => response.json());
 
 // removed from Image
 //width={film.media[0].cpxParam.images.small.imageWidth}
