@@ -3,12 +3,7 @@
         './public/**/*.html',
         './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}',
     ],
-    safelist: [
-        'astro-imagetools',
-        {
-            pattern: /astro-imagetools-.+/,
-        },
-    ],
+
     // more options here
 
     theme: {

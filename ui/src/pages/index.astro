@@ -21,7 +21,7 @@ const url = "https://affestival.blob.core.windows.net/articles/817/large-b482273
     <h2 class="text-2xl py-4">List of Films for 2022:</h2>
            
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"> 
-        { data.results.map(film => 
+        { data.results.map((film, index) => 
             <div class="text-green-800 hover:text-orange-600">          
                <a href={"/films/" + film.urlKey}>
                   <Image src={"https:" + film.media[0].cpxParam.blobContainer + "/" + film.media[0].cpxParam.images.small.blobFileName}
@@ -29,6 +29,8 @@ const url = "https://affestival.blob.core.windows.net/articles/817/large-b482273
                      width=430
                      height=240
                      layout="fixed"     
+                     loading = { (index > 2) ? "lazy" : "eager" }                     
+                     format={["webp"]}
                      grayscale    
                    />
                </a>
