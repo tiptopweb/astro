@@ -6,8 +6,8 @@ export default {
   //dist: '../api/Tiptopweb.Astro/wwwroot',       // Build to the ServiceStack wwwroot
   // public: './public',   // A folder of static files Astro will copy to the root. Useful for favicons, images, and other files that don’t need processing.
   buildOptions: {
-    // site: 'http://example.com',           // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
-    sitemap: false,         // Generate sitemap (set to "false" to disable)
+    site: 'https://astro.tiptopweb.com.au',           // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
+    sitemap: true,         // Generate sitemap (set to "false" to disable)
   },
   devOptions: {
     // hostname: 'localhost',  // The hostname to run the dev server on.
