@@ -18,9 +18,9 @@ The C# .NET 6 project is published in a Linux AMI 2 instance on AWS.
 Testing Splide slider as Vue component
 <https://splidejs.com/integration/vue-splide/>
 
+Using the excellent Astro Image Tool
+<https://github.com/RafidMuhymin/astro-imagetools>
+
+We get 99%-100% on Google Lighthouse (even the pages with the Sliders on Mobile device)
+
 Demo: <https://astro.tiptopweb.com.au/>
-
-TODO:
-
-* Also add some API calls at run time and test partial hydration (registration form)
-* publish the static part to CDN (Github page or S3 bucket) and proxy the /api to the web server
