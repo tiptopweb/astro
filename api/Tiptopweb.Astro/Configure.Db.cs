@@ -21,8 +21,43 @@ namespace Tiptopweb.Astro
             // Create non-existing Table and add Seed Data Example
             .ConfigureAppHost(appHost => {
                 using var db = appHost.Resolve<IDbConnectionFactory>().Open();
-                db.CreateTableIfNotExists<Article>();
-                db.CreateTableIfNotExists<Media>();
+                if (db.CreateTableIfNotExists<Article>())
+                {
+                    var article = new Article
+                    {
+                       Guid = Guid.NewGuid(),
+                       UrlKey = "test",
+                       EnglishTitle = "The Title",
+                       FrenchTitle = "Le Title",
+                       Synopsis = "Description",
+                       Director = "Bob",
+                       Cast = "John, Emma",
+                       Year = 2022,
+                       Published = true,
+                       Deleted = false,
+                       Status = 0,
+                       Type = 0,
+                    };
+                    db.Insert(article);
+                }
+                if (db.CreateTableIfNotExists<Image>())
+                {
+                    var image = new Image
+                    {
+                        ArticleId = 1,
+                        Guid = Guid.NewGuid(),
+                        UrlCdn = string.Empty,
+                        UrlProxy = string.Empty,
+                        Published = true,
+                        IsFeatured = false,
+                        Deleted = false,
+                        Status = 0,
+                        Type = 0,
+                        DisplayOrder = 1,
+                        Name = string.Empty
+                    };
+                    db.Insert(image);
+                }
             });
     }
 }

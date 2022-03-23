@@ -20,7 +20,6 @@ namespace Tiptopweb.Astro
                 };
 
                 appHost.Plugins.Add(new AutoQueryFeature {
-                    IncludeTotal = true,
                     GenerateCrudServices = new GenerateCrudServices {
                        AutoRegister = true,
                        ServiceFilter = (op, req) =>
@@ -38,6 +37,22 @@ namespace Tiptopweb.Astro
                        IncludeService = op => !skipTables.Any(table => op.ReferencesAny(table))
                     }
                 });
+                
+                // Can use to configure both code-first + generated types
+                
+                appHost.ConfigureTypes(type =>
+                {
+                    switch (type.Name)
+                    {
+                        case nameof(Article):
+                             break;
+                        
+                        case nameof(Image):
+                            type.Property("ArticleId").Ref = new() { Model = "Article", RefId = "Id", RefLabel = "EnglishTitle" };
+                            break;
+                    }
+                });
+                
             });
     }
 }
