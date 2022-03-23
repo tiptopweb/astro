@@ -17,8 +17,6 @@ public partial class AstroServices : Service
 
         // additional filtering
         sql = sql.Where<Article>(x => 
-            x.ApplicationId == 1 && 
-            x.SectionId == 4 &&
             x.Published &&
             !x.Deleted
             );
