@@ -25,18 +25,18 @@ namespace Tiptopweb.Astro
                 {
                     var article = new Article
                     {
-                       Guid = Guid.NewGuid(),
-                       UrlKey = "test",
-                       EnglishTitle = "The Title",
-                       FrenchTitle = "Le Title",
-                       Synopsis = "Description",
-                       Director = "Bob",
-                       Cast = "John, Emma",
-                       Year = 2022,
-                       Published = true,
-                       Deleted = false,
-                       Status = 0,
-                       Type = 0,
+                        DateCreated = DateTime.Now,
+                        UrlKey = "test",
+                        EnglishTitle = "The Title",
+                        FrenchTitle = "Le Title",
+                        Synopsis = "Description",
+                        Director = "Bob",
+                        Cast = "John, Emma",
+                        Year = 2022,
+                        Published = true,
+                        Deleted = false,
+                        Status = 0,
+                        Type = 0,
                     };
                     db.Insert(article);
                 }
@@ -45,8 +45,6 @@ namespace Tiptopweb.Astro
                     var image = new Image
                     {
                         ArticleId = 1,
-                        Guid = Guid.NewGuid(),
-                        UrlCdn = string.Empty,
                         UrlProxy = string.Empty,
                         Published = true,
                         IsFeatured = false,

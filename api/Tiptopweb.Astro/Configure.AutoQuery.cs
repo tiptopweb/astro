@@ -33,6 +33,7 @@ namespace Tiptopweb.Astro
                        },
                        TypeFilter = (type, req) =>
                        {
+                           if (type.Name == "Image") type.Property("UrlProxy").AddAttribute(new FormatAttribute(FormatMethods.Icon));
                        },
                        IncludeService = op => !skipTables.Any(table => op.ReferencesAny(table))
                     }
@@ -40,12 +41,15 @@ namespace Tiptopweb.Astro
                 
                 // Can use to configure both code-first + generated types
                 
+                var dateFormat = new IntlDateTime(DateStyle.Medium).ToFormat();
+                
                 appHost.ConfigureTypes(type =>
                 {
                     switch (type.Name)
                     {
                         case nameof(Article):
-                             break;
+                            type.Property("DateCreated").Format = dateFormat;
+                            break;
                         
                         case nameof(Image):
                             type.Property("ArticleId").Ref = new() { Model = "Article", RefId = "Id", RefLabel = "EnglishTitle" };

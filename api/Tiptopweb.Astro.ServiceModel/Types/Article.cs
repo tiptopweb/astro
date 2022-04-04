@@ -10,10 +10,10 @@ namespace Tiptopweb.Astro.ServiceModel.Types
     {
         [AutoIncrement]
         public long Id { get; set; }
-        
+
         [Required]
-        public Guid Guid { get; set; }
-        
+        public DateTime DateCreated { get; set; }    
+
         [Required]
         public string UrlKey { get; set; }
         

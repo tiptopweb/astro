@@ -11,17 +11,11 @@ namespace Tiptopweb.Astro.ServiceModel.Types
         public long Id { get; set; }
         
         [Required]
-         public long ArticleId { get; set; }
-        
-        [Required]
-        public Guid Guid { get; set; }
-        
-        [Required]
-        public string UrlCdn { get; set; }    
+        public long ArticleId { get; set; }
         
         [Required]
         public string UrlProxy { get; set; }    
-        
+
         [Required]
         public bool Published { get; set; }
         
